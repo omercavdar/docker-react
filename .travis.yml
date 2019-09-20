@@ -3,10 +3,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t omercavdar/docker-react -f Dockerile.dev .
+  - docker build -t omercavdar/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true USERNAME/docker-react npm run test
+  - docker run -e CI=true omercavdar/docker-react npm run test
 
 
 
